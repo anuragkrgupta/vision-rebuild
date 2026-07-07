@@ -30,3 +30,13 @@ FRAME_HEIGHT = 480
 # None = detect everything YOLO knows. Restrict later once you decide which
 # object classes actually matter for navigation (person, chair, car, etc.)
 TARGET_CLASSES = None
+
+# --- Distance estimation ---
+# Default assumes a typical laptop webcam at 640x480. Recalibrate for your
+# actual camera using distance.calibrate() for meaningfully better accuracy.
+FOCAL_LENGTH_PX = 615.0
+
+# --- Audio feedback ---
+MAX_ANNOUNCEMENTS_PER_CYCLE = 2   # don't announce more than this per detection cycle
+AUDIO_COOLDOWN_SECONDS = 4.0        # don't repeat the same class within this window
+SPEECH_RATE = 175                      # words per minute, pyttsx3 default is ~200
